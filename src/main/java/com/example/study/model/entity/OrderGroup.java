@@ -27,9 +27,11 @@ public class OrderGroup {
     private String paymentType; // 카드 / 현금
     private BigDecimal totalPrice;
     private Integer totalQuantity;
+    private LocalDateTime orderAt;
     private LocalDateTime arrivalDate;
     private LocalDateTime createdAt;
     private String createdBy;
     private LocalDateTime updatedAt;
     private String updatedBy;
+    private Long userId;
 }
