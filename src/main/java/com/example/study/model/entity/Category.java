@@ -4,30 +4,24 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity
-//@Table(name="user") // 클래스의 이름과 테이블 이름이 동일하다면 선언하지 않아도 됨.
-public class User {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String account;
-    private String password;
-    private String status;
-    private String email;
-    private String phoneNumber;
-    private LocalDateTime registeredAt;
-    private LocalDateTime unregisteredAt;
+    private String type;
+    private String title;
     private LocalDateTime createdAt;
     private String createdBy;
     private LocalDateTime updatedAt;
     private String updatedBy;
-
-
 }
