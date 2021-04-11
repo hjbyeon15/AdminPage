@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/user")
-public class UserApiController implements CrudInterface {
+public class UserApiController implements CrudInterface<UserApiRequest, UserApiResponse> {
+
+
 
     @Override
     @PostMapping("") // /api/user
@@ -18,13 +20,13 @@ public class UserApiController implements CrudInterface {
 
     @Override
     @GetMapping("{id}") // /api/user/{id}
-    public Header read(@PathVariable(name="id") Long id) {
+    public Header<UserApiResponse> read(@PathVariable(name="id") Long id) {
         return null;
     }
 
     @Override
     @PutMapping("") // /api/user
-    public Header update() {
+    public Header<UserApiResponse> update(@RequestBody UserApiRequest request) {
         return null;
     }
 
