@@ -19,8 +19,8 @@ public class OrderDetailRepositoryTest extends StudyApplicationTests {
         orderDetail.setStatus("WAITING");
         orderDetail.setArrivalDate(LocalDateTime.now().plusDays(2));
         orderDetail.setQuantity(1);
-        orderDetail.setOrderGroupId(1L);
-        orderDetail.setItemId(1L);
+//        orderDetail.setOrderGroupId(1L);
+//        orderDetail.setItemId(1L);
         orderDetail.setCreatedAt(LocalDateTime.now());
         orderDetail.setCreatedBy("AdminServer");
 
